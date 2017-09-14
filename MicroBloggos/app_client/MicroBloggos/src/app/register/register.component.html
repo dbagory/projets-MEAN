@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Formulaire Register</h1>
+  <form #regform="ngForm" (ngSubmit)="createUser(regform)" novalidate>
+        <p>Name</p>
+    <input name="name" ngModel required>
+    <p>Email</p>
+    <input name="email" ngModel required><br>
+    <p>Password</p>
+    <input type="password" name="password" ngModel required>
+    <input type="hidden" name="id" ngModel required>
+    <br><br>
+    <button>Submit</button>
+  </form>
+  {{ regform.value.message }}
+</div>

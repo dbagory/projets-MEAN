@@ -1,0 +1,15 @@
+<div class="container" *ngIf="userLoaded">
+  <h1>Formulaire Updater</h1>
+  <!-- <form #updateform="ngForm" (ngSubmit)="updatingUser(updateform)" novalidate--> 
+    <form>
+        
+    <p>Name</p>
+    <input name="name"  [(ngModel)]="userLoaded.name">
+    <p>Email</p>
+    <input name="email" [(ngModel)]="userLoaded.email"  required><br>
+    <p>Password</p>
+    <input type="password" name="password" [(ngModel)]="userLoaded.password" required>
+    <br><br>
+    <button (click)="LogingUser()">Submit</button>
+  </form>
+</div>

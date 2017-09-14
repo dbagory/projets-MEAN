@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let profile of profiles">
+
+    <a routerLink="/users/{{profile._id}}" routerLinkActive="active">{{profile.name}}</a> 
+    {{profile.email}} Created at :{{profile.createdAt}}
+    <!--<button (click)="deleteTodo()">X</button>-->
+  </li>
+</ul>

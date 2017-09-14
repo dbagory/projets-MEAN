@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Login</h1>
+  <form #logform="ngForm" (ngSubmit)="LogingUser(logform)" novalidate>
+        
+    <input type="hidden" name="name" ngModel required>
+    <p>Email</p>
+    <input name="email" ngModel required><br>
+    <p>Password</p>
+    <input name="password" ngModel required>
+    <br><br>
+    <button>Submit</button>
+  </form>
+  {{ logform.value.message }}
+</div>
